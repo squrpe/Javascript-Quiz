@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Quiz</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Heading Row -->
+    <header>
+        <h1>Javascript Quiz</h1>
+        <p>Test your skills on JavaScript fundamentals by taking this quiz.</p>
+    </header>
+
+    <main>
+        <!-- Intialisation Row -->
+        <div>
+            <button>Start Quiz</button>
+            
+            <button hidden='hidden'>Play again?</button>
+        </div>
+
+        <!-- Highscores Row -->
+        <aside>
+            <button>View Highscores</button>
+
+            <!-- Initial Input Row -->
+            <div hidden='hidden'>
+                <form>
+                    <label for='finitial'>First initial:</label>
+                    <br>
+                    <input type='text' id='finitial' name='finitial' placeholder='Enter First initial'/>
+                    <br>
+                    <label for='sinitial'>Second initial:</label>
+                    <br>
+                    <input type='text' id='sinitial' name='sinitial' placeholder='Enter Second initial'/>
+                </form>
+
+                <button>Save my score</button>
+            </div>
+        </aside>
+
+    </main>
+
+    <script src="assets/js/questions.js"></script>
+    
+</body>
+</html>
