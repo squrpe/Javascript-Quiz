@@ -37,9 +37,9 @@ function generateQuestions(){
 
 function startQuiz() {
 
-    document.getElementById("home-screen").style.display = "none";
+    homeScreen.style.display = "none";
 
-    /*generateQuestions();
+    generateQuestions();
 
     var timerInterval = setInterval(function() {
 
@@ -49,11 +49,9 @@ function startQuiz() {
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
         }
-    
-      }, 1000);*/
+      }, 1000);
 
-      /*quizDisplay.style.display = 'flex';*/
-
+    quizDisplay.style.display = 'flex';
 }
 
 startQuizBtn.addEventListener("click", startQuiz);
