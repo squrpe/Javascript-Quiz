@@ -11,42 +11,61 @@
 <body>
 
     <!-- Heading Row -->
-    <header>
-        <h1>Javascript Quiz</h1>
-        <p>Test your skills on JavaScript fundamentals by taking this quiz.</p>
-    </header>
+
+    <div id="home-screen">
+
+        <header>
+            <h1>Javascript Quiz</h1>
+            <p>Test your skills on JavaScript fundamentals by taking this quiz.</p>
+        </header>
+
+        <button id="start-btn">Start Quiz</button>
+        <button id="highscores-btn" onclick="viewHighscores()">View Highscores</button>
+    </div>
 
     <main>
-        <!-- Intialisation Row -->
-        <div>
-            <button>Start Quiz</button>
-            
-            <button hidden='hidden'>Play again?</button>
+
+        <!-- Main Content Row -->
+
+        <div id="quiz-content">
+            <div id="timer">Seconds Left: </div>
+
+                <div id="question-title"><p>Placeholder</p></div>
+
+                <button id="a-option" onclick="checkAnswer('a')">A</button>
+                <button id="b-option" onclick="checkAnswer('b')">B</button>
+                <button id="c-option" onclick="checkAnswer('c')">C</button>
+                <button id="d-option" onclick="checkAnswer('d')">D</button>
+
+            <div id="answer"></div>
+        </div>
+
+
+        <!-- Input Row -->
+        <div id="score-input">
+            <div id="score"></div>
+            <input type="text" placeholder="Enter your initials" name="initials" id="initials"/>
+            <button id="finish-btn">Submit Score</button>
         </div>
 
         <!-- Highscores Row -->
-        <aside>
-            <button>View Highscores</button>
-
-            <!-- Initial Input Row -->
-            <div hidden='hidden'>
-                <form>
-                    <label for='finitial'>First initial:</label>
-                    <br>
-                    <input type='text' id='finitial' name='finitial' placeholder='Enter First initial'/>
-                    <br>
-                    <label for='sinitial'>Second initial:</label>
-                    <br>
-                    <input type='text' id='sinitial' name='sinitial' placeholder='Enter Second initial'/>
-                </form>
-
-                <button>Save my score</button>
+        <div id="highscore-page">
+            <div id="highscore-headings">
+                <h2>User ID</h2>
+                <h2>Score</h2>
             </div>
-        </aside>
 
+            <div id="user-initials"></div>
+            <div id="user-score"></div>
+
+            <!-- Game over Row -->
+            <div id="gameover-btn">
+                <button id="playagain-btn" onclick="playAgain()">Play Again?</button>
+            </div>
+        </div>
     </main>
 
-    <script src="assets/js/questions.js"></script>
-    
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/script.js" /></script>
 </body>
 </html>
