@@ -1,13 +1,15 @@
 
-header {
-    padding: 20px;
-    text-align: center;
-    font-family: 'Trebuchet MS', sans-serif;
-}
+/* Default Page CSS Selectors*/
 
-header h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e2efe2;
+    font-size: 25px;
 }
 
 button {
@@ -18,7 +20,7 @@ button {
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 25px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -29,4 +31,77 @@ button:hover {
     background-color: #4CAF50;
     color: white;
 }
+
+/* Starter Page CSS Selectors*/
   
+#home-screen {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h1, p{
+    text-align: center;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+#start-btn {
+    margin-bottom: 8px;
+}
+
+/* Main Quiz Page CSS Selectors */
+
+#quiz-content {
+    display: none;
+    flex-direction: column;
+}
+
+#timer {
+    text-align: center;
+}
+
+#score-input {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+#initials {
+    text-align: center;
+    font-size: 25px;
+
+    padding: 16px;
+    margin: 4px;
+    border: 2px solid #4CAF50;
+}
+
+#highscore-page {
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#highscore-headings {
+    justify-content: space-around;
+
+    background-color: #4CAF50;
+    color: white;
+
+}
+
+#user-initials{
+
+}
+
+#user-score {
+
+}
+
+#gameover-btn {
+    display: none;
+}
