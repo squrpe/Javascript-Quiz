@@ -2,6 +2,7 @@ var homeScreen = document.getElementById("home-screen");
 var startQuizBtn = document.getElementById("start-btn");
 var highscoresBtn = document.getElementById("highscores-btn");
 var submitBtn = document.getElementById("finish-btn");
+var playAgainBtn = document.getElementById("playagain-btn");
 
 var quizDisplay = document.getElementById("quiz-content");
 var timer = document.getElementById("timer");
@@ -35,8 +36,6 @@ function generateQuestions(){
 
     if (tempIndex === questionsIndex) {
         return inputScore();
-    } else {
-        totalSeconds = totalSeconds - 15;
     }
 
     var displayedQuestion = questions[tempIndex];
@@ -87,6 +86,8 @@ function inputScore() {
 
 submitBtn.addEventListener("click", function inputHighscore(){
 
+    // Unfinished
+
     /*if (nameInput.value === "") {
         alert("Initials cannot be blank");
         return false;
@@ -110,8 +111,9 @@ submitBtn.addEventListener("click", function inputHighscore(){
 
     }*/
 
-
-
+    scorePage.style.display = 'none';
+    highscoreScreen.style.display = 'flex';
+    generateHighscores();
 });
 
 function savedHighscores() {
@@ -119,6 +121,8 @@ function savedHighscores() {
         id: nameInput,
         finalScore: score,
     }
+
+    // Unfinished
 
 }
 
@@ -142,8 +146,9 @@ function generateHighscores() {
         highscoreName.appendChild(nameTemp);
         highscoreScore.appendChild(scoreTemp);
 
+        // Unfinished
     }
-
+    
 }
 
 function viewHighscores() {
@@ -165,10 +170,16 @@ function checkAnswer(ans) {
         generateQuestions();
     } else if (ans !== correctAnswer && tempIndex !== questionsIndex) {
         tempIndex++;
+        totalSeconds = totalSeconds - 15;
         generateQuestions();
     } else {
         inputScore();
     }
+}
+
+function playAgain() {
+    highscoreScreen.style.display = 'none';
+    homeScreen.style.display = 'flex';
 }
 
 startQuizBtn.addEventListener("click", startQuiz);
